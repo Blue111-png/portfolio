@@ -1,0 +1,48 @@
+/* Projects Section */
+body{
+    background-color: #1d1d1d;
+}
+#projects {
+  margin: 3rem 0;
+  font-family: Arial, sans-serif;
+}
+img{
+    width: 60%;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Project Cards */
+.project {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Project Headings */
+.project h3 {
+  color: #3498db;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/* Project Text */
+.project p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
