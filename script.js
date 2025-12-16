@@ -1,6 +1,7 @@
  const items = document.querySelectorAll('.animate-on-load')
 const container=document.querySelector('.container')
 const homeBtn=document.querySelector('.home-btn')
+const contactLink=document.getElementById('contact-link')
  
 
   window.addEventListener('load', () => {
@@ -14,6 +15,8 @@ const homeBtn=document.querySelector('.home-btn')
 
   const aboutBtn=document.querySelector('.btn-about')
   aboutBtn.addEventListener('click',()=>{
+document.getElementById("contact-link").style.display = "none";
+
 container.innerHTML=` <nav class='navigate'>
         
             <p class="list1 animate-on-load">
@@ -33,7 +36,7 @@ container.innerHTML=` <nav class='navigate'>
     </section>
 
     <section class="scroll-animate">
-    <p>Hi I'm blue
+    <p>Hi I'm blue again😁
     <br>
     I am a passionate Full-Stack Developer
      with strong expertise in building
@@ -98,6 +101,14 @@ Today, I channel that energy into projects that blend imagination with purpose. 
 const contactBtn=document.querySelector('.contact-btn')
 
 
+//  Auto-open contact form if requested
+if (window.openContact) {
+  setTimeout(() => {
+    contactBtn.click();
+    window.openContact = false;
+  }, 0);
+}
+
      const scrollBtn = document.querySelector('.scroll');
   if (scrollBtn) {
     scrollBtn.addEventListener('click', () => {
@@ -111,6 +122,7 @@ const contactBtn=document.querySelector('.contact-btn')
 let contactOpen=false;
 
 contactBtn.addEventListener('click',()=>{
+  
 if(!contactOpen){
 contactSection.innerHTML=`<form id="contactForm" class="contact-form" action="https://formspree.io/f/mdkqpnjg" method="POST">
 
@@ -154,11 +166,11 @@ contactOpen=true;
 const form = document.getElementById("contactForm");
 
 form.addEventListener("submit", async (e) => {
-  e.preventDefault(); // ✅ stops page refresh
+  e.preventDefault(); //  stops page refresh
 
   const formData = new FormData(form);
 
-  // ✅ Send to Formspree manually
+  //  Send to Formspree manually
   const response = await fetch(form.action, {
     method: "POST",
     body: formData,
@@ -171,6 +183,7 @@ form.addEventListener("submit", async (e) => {
   } else {
     alert("Oops! Something went wrong.");
   }
+
 });
 
 })
@@ -190,7 +203,7 @@ function observeSections() {
 }
 
 observeSections();
-
+  
   })
   //about event end
   //gallery event start
@@ -226,3 +239,8 @@ galleryBtn.addEventListener('click',()=>{
 
     observeSections()
 })
+
+contactLink.addEventListener('click', () => {
+  window.openContact = true;   // tell About page to open contact
+  aboutBtn.click();            // load About page dynamically
+});

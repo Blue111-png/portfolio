@@ -3,6 +3,10 @@
     box-sizing: border-box;
     color: whitesmoke;
 }
+:root{
+--color1: rgba(255, 110, 196, 0.6);
+--color2:rgba(0,0,0,0.8);
+}
 
 body{
     background-image:
@@ -10,12 +14,20 @@ body{
      background-size: cover;
      
 }
+#contact-link{
+  position: absolute;
+  top: 0;
+  right: 1rem;
+}
+#contact-link:hover{
+color: var(--color1);
+}
 .my-pic{
   display: flex;
-width: 50%;
 }
 .my-pic p {
-  margin-top: 8rem;
+  padding: 1rem;
+  margin-top: 6rem;
   white-space: nowrap;
   overflow: hidden;
   width: 0; /* start typing from nothing */
@@ -31,6 +43,8 @@ width: 50%;
 .my-pic img{
   width: 18rem;
   height: 18rem;
+  box-shadow: 0 0 20px var(--color1);
+  border-radius: 50%;
 }
 
 @keyframes wave {
@@ -65,9 +79,9 @@ ul li{
 ul li:hover{
    animation: wave 2.5s infinite ease-in-out;
   transform: scale(1.1) rotate(2deg);
-  box-shadow: 0 0 20px rgba(255, 110, 196, 0.6);
+ /* box-shadow: 0 0 20px rgba(255, 110, 196, 0.6);*/
+ box-shadow: 0 0 20px var(--color1);
   filter: blur(0.5px);
-
 }
 /*animation for contact*/
 @keyframes introMorph { 
@@ -137,14 +151,14 @@ button{
 .navigate button:hover {
   animation: wave 2.5s infinite ease-in-out;
   transform: scale(1.1) rotate(2deg);
-  box-shadow: 0 0 20px rgba(255, 110, 196, 0.6);
+  box-shadow: 0 0 20px var(--color1);
  
 }
 
 
 /*about page style*/
 .info{
-   background: rgba(0,0,0,0.8);
+   background: var(--color2);
   width: 80%;
   margin: auto;
   border-radius: 15px;
@@ -165,7 +179,7 @@ section p{
 
 input,textarea{
   margin: 1rem;
-  color: black;
+  color: var(--color2);
 }
 .contact-form{
   animation:  introMorph 2s ease forwards;
@@ -193,7 +207,7 @@ input,textarea{
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px 10px;
-  background: rgba(0,0,0,0.8);
+  background: var(--color2);
 }
 
 .gallery img {
@@ -208,7 +222,7 @@ input,textarea{
   transition: transform 0.5s ease-in-out;
 }
 .headings{
-   box-shadow: 0 0 20px rgba(255, 110, 196, 0.6);
+   box-shadow: 0 0 20px var(--color1);
    text-align: center;
    padding: 6px;
 }
@@ -220,7 +234,7 @@ h2::before{
   z-index: 1000;
   width: 60px;      /* Increased width */
   height: 60px;     /* Increased height */
-  color: black;
+  color: var(--color2);
   right: 50px;
   bottom: 20px;
   background: #fff; /* Optional: add background for visibility */
@@ -240,7 +254,7 @@ figure img{
   height: 200px !important;
 }
 .important{
-  background: rgba(0,0,0,0.8);
+  background: var(--color2);
 }
 .contact-card p {
       margin: 0.5rem 0;
