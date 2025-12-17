@@ -1,32 +1,51 @@
+
 /* Projects Section */
 body{
-    background-color: #1d1d1d;
+   background-image: url("images/pexels-pixabay-459653.jpg");
+background-size: cover;
 }
 #projects {
   margin: 3rem 0;
   font-family: Arial, sans-serif;
-}
-img{
-    width: 60%;
+  background: transparent;
 }
 
-#projects h2 {
-  font-size: 2rem;
-  color: #2c3e50;
-  border-bottom: 2px solid #3498db;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
+.bluish:hover{
+color: #3498db;
+}
+nav{
+position: fixed;
+top: 0;
+right: 1rem;
+}
+a {
+  text-decoration: none;   /* removes underline */
+  color: inherit;          /* makes link use parent text color */
 }
 
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ddd;   /* optional: keep it clean on hover */
+}
+
+a:active {
+  color: inherit;
+}
 /* Project Cards */
 .project {
-  background: #f9f9f9;
+  display: flex;
+  background: transparent;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  gap: 1rem;
 }
 
 .project:hover {
@@ -45,4 +64,27 @@ img{
 .project p {
   margin: 0.5rem 0;
   line-height: 1.5;
+}
+img{
+    width: 60%;
+    border-radius: 4px;
+}
+
+
+
+.project div{
+   background-color: #ddd;
+   padding: 2rem;
+   border-radius: 4px;
+}
+@media (max-width: 720px){
+.project{
+  display: block;
+
+}
+img{
+  width:100%;
+  height: 13rem;
+}
+
 }
