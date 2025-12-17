@@ -266,6 +266,9 @@ figure img{
       margin: 0.5rem 0;
       font-size: 1.1rem;
     }
+    .out{
+      color: #fff;
+    }
 
 
 @media (max-width: 720px){
