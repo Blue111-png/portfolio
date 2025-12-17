@@ -135,7 +135,7 @@ contactSection.innerHTML=`<form id="contactForm" class="contact-form" action="ht
   <input type="email" id="email" name="email" required>
   <br>
   <label for='phone' >Phone:</label>
-  <input type='number' id='number' name='phone' required/>
+  <input type='text' id='number' name='phone' required/>
 <br>
   <label for="message">Message:<br></label>
   <textarea id="message" name="message" rows="5" required></textarea>

@@ -1,16 +1,17 @@
 *,::after,::before{
     margin: 0;
     box-sizing: border-box;
-    color: whitesmoke;
+    color: var(--color2);
 }
 :root{
---color1: rgba(255, 110, 196, 0.6);
---color2:rgba(0,0,0,0.8);
+--color1: rgba(200, 249, 128, 0.6);
+--color2:rgba(0,0,0);
 }
 
 body{
     background-image:
-     url('https://images.pexels.com/photos/25382287/pexels-photo-25382287.jpeg');
+     /*url('https://images.pexels.com/photos/25382287/pexels-photo-25382287.jpeg');*/
+     url("images/pexels-pixabay-459653.jpg");
      background-size: cover;
      
 }
@@ -25,13 +26,13 @@ color: var(--color1);
 .my-pic{
   display: flex;
 }
-.my-pic p {
+.my-pic p{
   padding: 1rem;
   margin-top: 6rem;
   white-space: nowrap;
   overflow: hidden;
   width: 0; /* start typing from nothing */
-
+color: whitesmoke;
   animation: typing 5s steps(30, end) forwards;
 }
 
@@ -41,10 +42,12 @@ color: var(--color1);
 }
 
 .my-pic img{
-  width: 18rem;
-  height: 18rem;
+  width: 300px;
+  height: 300px;
   box-shadow: 0 0 20px var(--color1);
   border-radius: 50%;
+  object-fit: cover;
+  display: block;
 }
 
 @keyframes wave {
@@ -117,7 +120,7 @@ ul li:hover{
 }
 button{
     
-     color:whitesmoke;
+     color:rgb(250, 250, 250);
     font-size: xx-large;
     text-align: center;
     /*text-decoration:underline dotted;*/
@@ -152,13 +155,15 @@ button{
   animation: wave 2.5s infinite ease-in-out;
   transform: scale(1.1) rotate(2deg);
   box-shadow: 0 0 20px var(--color1);
- 
+
 }
 
 
 /*about page style*/
 .info{
-   background: var(--color2);
+   background: rgba(255, 255, 255, 0.1); /* almost transparent */
+  -webkit-backdrop-filter: blur(10px);
+   backdrop-filter: blur(10px);
   width: 80%;
   margin: auto;
   border-radius: 15px;
@@ -207,7 +212,7 @@ input,textarea{
   max-width: 1400px;
   margin: 0 auto;
   padding: 20px 10px;
-  background: var(--color2);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .gallery img {
