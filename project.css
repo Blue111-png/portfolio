@@ -1,4 +1,12 @@
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color1: rgba(200, 249, 128, 0.6);
+  --color2: rgba(0,0,0);
+}
 /* Projects Section */
 body{
    background-image: url("images/pexels-pixabay-459653.jpg");
@@ -8,28 +16,42 @@ background-size: cover;
   margin: 3rem 0;
   font-family: Arial, sans-serif;
   background: transparent;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.anton {
+  font-family: "Anton";
+}
+a{
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
 
 .bluish:hover{
 color: #3498db;
 }
-nav{
-position: fixed;
-top: 0;
-right: 1rem;
-}
-a {
-  text-decoration: none;   /* removes underline */
-  color: inherit;          /* makes link use parent text color */
-}
+
 
 a:visited {
   color: inherit;
 }
 
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
 a:hover {
   text-decoration: none;
-  color: #ddd;   /* optional: keep it clean on hover */
+   animation: wave 2.5s infinite ease-in-out;
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 0 20px var(--color1);
+  filter: blur(0.5px);
 }
 
 a:active {
@@ -46,6 +68,7 @@ a:active {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   gap: 1rem;
+  animation: introMorph 1.5s ease forwards;
 }
 
 .project:hover {
@@ -60,6 +83,19 @@ a:active {
   margin-bottom: 0.5rem;
 }
 
+nav{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  
+}
+nav a{
+  text-decoration: none;
+  font-size: xx-large;
+  color: var(--color2);
+  
+}
+
 /* Project Text */
 .project p {
   margin: 0.5rem 0;
@@ -70,17 +106,34 @@ img{
     border-radius: 4px;
 }
 
-
-
 .project div{
    background-color: #ddd;
    padding: 2rem;
    border-radius: 4px;
 }
+
+/* Intro animation */
+@keyframes introMorph {
+  0% { opacity: 0; transform: scale(0.8) rotate(-5deg); filter: blur(4px); }
+  60% { opacity: 1; transform: scale(1.05) rotate(2deg); filter: blur(0.5px); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); filter: blur(0); }
+}
+
 @media (max-width: 720px){
 .project{
   display: block;
 
+}
+#projects{
+  display: block;
+  margin: 1rem;
+}
+nav{
+  flex-direction: column;
+  gap: 0.5rem;
+}
+nav a{
+  padding: 0.2rem;
 }
 img{
   width:100%;

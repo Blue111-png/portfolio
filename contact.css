@@ -1,0 +1,135 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --color1: rgba(200, 249, 128, 0.6);
+  --color2: rgba(0,0,0);
+}
+
+.anton {
+  font-family: "Anton";
+}
+
+/* Page background */
+body {
+  background-image: url("images/pexels-pixabay-459653.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--color2);
+  font-family: sans-serif;
+  padding: 2rem;
+}
+.contact-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: normal;
+}
+nav{
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  
+}
+nav a{
+  text-decoration: none;
+  font-size: xx-large;
+  color: var(--color2);
+  
+}
+.contact-container a:hover{
+color: chartreuse;
+}
+
+/* Contact form */
+.contact-form {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 1.5rem;
+  border-radius: 10px;
+  /*max-width: 500px;*/
+  width: 60%;
+  margin: auto;
+  animation: introMorph 1.5s ease forwards;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background: var(--color1);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  box-shadow: 0 0 15px var(--color1);
+  transform: scale(1.05);
+}
+
+/* Contact card */
+.contact-card {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 2rem auto;
+}
+
+.contact-card a {
+  color: var(--color1);
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+/* Intro animation */
+@keyframes introMorph {
+  0% { opacity: 0; transform: scale(0.8) rotate(-5deg); filter: blur(4px); }
+  60% { opacity: 1; transform: scale(1.05) rotate(2deg); filter: blur(0.5px); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); filter: blur(0); }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 720px) {
+  body {
+    padding: 1rem;
+  }
+  .contact-container{
+    flex-direction: column;
+  }
+  nav{
+    gap: 0.5rem;
+  }
+
+  .contact-form,
+  .contact-card {
+    width: 100%;
+    margin:1rem auto;
+  }
+}
