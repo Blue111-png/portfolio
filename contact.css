@@ -14,9 +14,8 @@
 
 /* Page background */
 body {
-  background-image: url("images/pexels-pixabay-459653.jpg");
+  background-image: url("images/pexels-pixabay-459653\ \(2\).jpg");
   background-size: cover;
-  background-position: center;
   color: var(--color2);
   font-family: sans-serif;
   padding: 2rem;

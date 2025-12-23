@@ -10,9 +10,8 @@
 
 /* Background */
 body {
-  background-image: url("images/pexels-pixabay-459653.jpg");
+  background-image: url("images/pexels-pixabay-459653\ \(2\).jpg");
   background-size: cover;
-  background-position: center;
   color: var(--color2);
   font-family: sans-serif;
   padding: 1rem;
@@ -88,7 +87,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.gallery img {
+.gallery .small {
   width: 100%;
   max-width: 350px;
   height: 300px;
@@ -97,7 +96,7 @@ body {
   transition: transform 0.5s ease-in-out;
 }
 
-.gallery img:hover {
+.gallery .small:hover {
   transform: scale(1.1);
 }
 
@@ -122,6 +121,28 @@ body {
 .scroll:hover {
   opacity: 1;
 }
+.big{
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.lightbox{
+  position:fixed;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  background-color:var(--color2);
+  display:none;
+  
+}
+#close-btn{
+  position:fixed;
+  height:3rem;
+  width: 3rem;
+  right: 0;
+}
 
 /* Mobile */
 @media (max-width: 720px) {
@@ -132,6 +153,15 @@ body {
     padding: 0.2rem;
     width: 100%;
   }
+  .lightbox{
+    padding-top: 5rem;
+  }
+  
+.big{
+  width: 100%;
+  height: 75%;
+  margin: 0 auto;
+}
 .navigate a{
   padding: 0.1rem;
   width: 100%;
