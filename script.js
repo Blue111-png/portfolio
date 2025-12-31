@@ -30,16 +30,4 @@ function observeSections() {
   sections.forEach(section => observer.observe(section));
 }
 
-observeSections();
-  
-  
-  
-    const scrollBtn=document.querySelector('.scroll')
-    scrollBtn.addEventListener('click',()=>{
-      window.scrollTo({
-        top:0,
-        behavior:'smooth'
-      })
-    })
-
     observeSections()

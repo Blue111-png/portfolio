@@ -10,6 +10,22 @@
 --color2:rgba(0,0,0);
 }
 
+
+  .icon {
+  display: inline-block;       /* keeps icons side by side */
+  padding: 0.5rem;             /* slightly smaller padding for balance */
+  background-color: whitesmoke;
+  border-radius: 50%;          /* makes the background circular */
+  margin-right: 8px;           /* space between icons */
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);       /* grow slightly on hover */
+  background-color: #e0e0e0;   /* subtle hover effect */
+}
+  
+
 body{
     background-image:
      url("images/pexels-pixabay-459653\ \(2\).jpg");
@@ -156,7 +172,7 @@ h2::before{
   .wave-text{
     letter-spacing: 0.5rem;
   }
-  
+
   body{
     background-position: center;
   }
